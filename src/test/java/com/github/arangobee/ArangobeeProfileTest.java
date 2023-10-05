@@ -1,13 +1,13 @@
 package com.github.arangobee;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Matchers.any;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 
 import com.github.arangobee.changeset.ChangeEntry;
 import com.github.arangobee.exception.ArangobeeConnectionException;
@@ -79,7 +79,6 @@ public class ArangobeeProfileTest extends AbstractArangobeeTest {
         // given
         setSpringEnvironment(new EnvironmentMock("foobar"));
         runner.setChangeLogsScanPackage(ProfiledDevChangeLog.class.getPackage().getName());
-        when(dao.isNewChange(any(ChangeEntry.class))).thenReturn(true);
 
         // when
         runner.execute();

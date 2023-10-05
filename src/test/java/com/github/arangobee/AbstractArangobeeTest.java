@@ -1,9 +1,9 @@
 package com.github.arangobee;
 
-import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.anyBoolean;
-import static org.mockito.Matchers.anyInt;
-import static org.mockito.Matchers.anyString;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyBoolean;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.doCallRealMethod;
 import static org.mockito.Mockito.mock;
@@ -63,9 +63,10 @@ public class AbstractArangobeeTest {
             @Override
             public Object answer(InvocationOnMock invocation) throws Throwable {
                 list.add((BaseDocument) invocation.getArguments()[0]);
-                return mock(DocumentCreateEntity.class);
+                return new DocumentCreateEntity<>();
             }
-        });
+        });{
+    }
         when(fakeArangoDatabase.collection(anyString())).thenReturn(mockColletion);
         doAnswer(new Answer() {
             @Override
