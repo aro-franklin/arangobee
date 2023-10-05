@@ -79,7 +79,6 @@ public class ArangobeeProfileTest extends AbstractArangobeeTest {
         // given
         setSpringEnvironment(new EnvironmentMock("foobar"));
         runner.setChangeLogsScanPackage(ProfiledDevChangeLog.class.getPackage().getName());
-
         // when
         runner.execute();
 

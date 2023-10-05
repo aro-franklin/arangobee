@@ -3,7 +3,6 @@ package com.github.arangobee.resources;
 import org.springframework.core.env.Environment;
 import org.springframework.core.env.Profiles;
 
-
 /**
  * Mock for Spring environment
  * @author lstolowski

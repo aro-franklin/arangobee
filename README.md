@@ -21,13 +21,13 @@ With Maven
 <dependency>
   <groupId>io.github.cmoine</groupId>
   <artifactId>arangobee</artifactId>
-  <version>0.17</version>
+  <version>0.18</version>
 </dependency>
 ```
 With Gradle
 ```groovy
 compile 'org.javassist:javassist:3.18.2-GA' // workaround for ${javassist.version} placeholder issue*
-compile 'com.github.arangobee:arangobee:0.17'
+compile 'com.github.arangobee:arangobee:0.18'
 ```
 
 ### Usage with Spring
